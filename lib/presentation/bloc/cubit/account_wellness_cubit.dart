@@ -4,14 +4,14 @@ import 'package:kalshi_exercise/domain/usecases/get_account_wellness_usecase.dar
 import 'package:kalshi_exercise/presentation/bloc/state/account_wellness_state.dart';
 
 class AccountWellnessCubit extends Cubit {
-  AccountWellnessCubit(
-    super.initialState,
-    this.getAccountWellnessUsecase,
-  );
+  AccountWellnessCubit({
+    required this.getAccountWellnessUsecase,
+  }
+  ) : super(null);
 
   final GetAccountWellnessUsecase getAccountWellnessUsecase;
 
-  void accountWellness(AccountWellnessEntity accountWellnessEntity) {
+  void accountWellness(AccountWellnessEntity accountWellnessEntity) async {
     final either = getAccountWellnessUsecase(accountWellnessEntity);
     either.fold(
       (failure) => emit(AccountWellnessFailState(failure)),

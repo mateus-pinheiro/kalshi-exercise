@@ -9,6 +9,9 @@ const double annualTaxRate = 0.08;
 const double monthsInYear = 12;
 const double percentageMultiplier = 100;
 
+const double healthyThreshold = 25;
+const double mediumThreshold = 75;
+
 class GetAccountWellnessUsecase
     extends Usecase<AccountWellnessStatus, AccountWellnessEntity> {
   @override
@@ -18,11 +21,11 @@ class GetAccountWellnessUsecase
         params.annualGrossIncome - (params.annualGrossIncome * annualTaxRate);
     double totalAnnualCosts = params.averageMonthlyCosts * monthsInYear;
     double costsToIncomeRatio =
-        (totalAnnualCosts / netAnnualIncome) * percentageMultiplier;    
+        (totalAnnualCosts / netAnnualIncome) * percentageMultiplier;
 
-    return costsToIncomeRatio <= 25
+    return costsToIncomeRatio <= healthyThreshold
         ? Right(AccountWellnessStatus.healthy)
-        : costsToIncomeRatio <= 75
+        : costsToIncomeRatio <= mediumThreshold
             ? Right(AccountWellnessStatus.medium)
             : Right(AccountWellnessStatus.low);
   }
