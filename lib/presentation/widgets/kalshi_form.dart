@@ -3,8 +3,10 @@ import 'package:kalshi_exercise/presentation/widgets/kalshi_button.dart';
 import 'package:kalshi_exercise/presentation/widgets/kalshi_textfield.dart';
 
 class KalshiForm extends StatefulWidget {
+  const KalshiForm({super.key});
+
   @override
-  _KalshiFormState createState() => _KalshiFormState();
+  State<StatefulWidget> createState() => _KalshiFormState();
 }
 
 class _KalshiFormState extends State<KalshiForm> {
@@ -15,8 +17,6 @@ class _KalshiFormState extends State<KalshiForm> {
   void _submit() {
     if (_formKey.currentState!.validate()) {
       // Form is valid, process data
-      print('Annual Income: ${_incomeController.text}');
-      print('Monthly Costs: ${_costsController.text}');
     }
   }
 

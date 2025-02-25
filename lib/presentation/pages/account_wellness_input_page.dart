@@ -1,16 +1,13 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/svg.dart';
 import 'package:kalshi_exercise/presentation/widgets/kalshi_appbar.dart';
-import 'package:kalshi_exercise/presentation/widgets/kalshi_button.dart';
 import 'package:kalshi_exercise/presentation/widgets/kalshi_form.dart';
-import 'package:kalshi_exercise/presentation/widgets/kalshi_textfield.dart';
 
 class AccountWellnessInputPage extends StatefulWidget {
-  const AccountWellnessInputPage({Key? key}) : super(key: key);
+  const AccountWellnessInputPage({super.key});
 
   @override
-  _AccountWellnessInputPageState createState() =>
-      _AccountWellnessInputPageState();
+  State<StatefulWidget> createState() => _AccountWellnessInputPageState();
 }
 
 class _AccountWellnessInputPageState extends State<AccountWellnessInputPage> {
@@ -27,7 +24,7 @@ class _AccountWellnessInputPageState extends State<AccountWellnessInputPage> {
 }
 
 class _AccountWellnessInputBody extends StatelessWidget {
-  const _AccountWellnessInputBody({super.key});
+  const _AccountWellnessInputBody();
 
   @override
   Widget build(BuildContext context) {

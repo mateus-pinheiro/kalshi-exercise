@@ -1,5 +1,4 @@
-import 'package:either_dart/src/either.dart';
-import 'package:kalshi_exercise/core/failure.dart';
+import 'package:either_dart/either.dart';
 import 'package:kalshi_exercise/core/usecase.dart';
 import 'package:kalshi_exercise/domain/entities/account_wellness_entity.dart';
 import 'package:kalshi_exercise/domain/entities/account_wellness_enum.dart';

@@ -14,7 +14,7 @@ class AccountWellnessResultPage extends StatelessWidget {
 }
 
 class _AccountWellnessResultBody extends StatelessWidget {
-  const _AccountWellnessResultBody({super.key});
+  const _AccountWellnessResultBody();
 
   @override
   Widget build(BuildContext context) {

@@ -1,7 +1,5 @@
 import 'package:flutter/material.dart';
 
-import 'package:flutter/material.dart';
-
 enum KalshiButtonType { primary, secondary }
 
 class KalshiButton extends StatelessWidget {
