@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:kalshi_exercise/src/presentation/shared/i18n/strings.g.dart';
 import 'package:kalshi_exercise/src/presentation/shared/styles/font_styles.dart';
 
 class SecurityInfo extends StatelessWidget {
@@ -18,7 +19,7 @@ class SecurityInfo extends StatelessWidget {
         Padding(
           padding: EdgeInsets.symmetric(horizontal: 40),
           child: Text(
-            "Your financial information is encrypted and secure. We'll never share or sell any of your personal data.",
+            t.securityInfo,
             style: FontStyles.body,
             textAlign: TextAlign.center,
           ),

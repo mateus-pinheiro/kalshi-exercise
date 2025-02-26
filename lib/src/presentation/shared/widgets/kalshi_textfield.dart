@@ -20,10 +20,8 @@ class KalshiTextField extends StatefulWidget {
 }
 
 class _KalshiTextFieldState extends State<KalshiTextField> {
-  final NumberFormat _currencyFormat = NumberFormat.currency(
-    locale: 'en_US',
-    symbol: '',
-  );
+  final _currencyFormat =
+      NumberFormat.simpleCurrency(name: '', locale: 'en_US', decimalDigits: 2);
 
   @override
   void initState() {
@@ -71,9 +69,6 @@ class _KalshiTextFieldState extends State<KalshiTextField> {
           inputFormatters: [FilteringTextInputFormatter.digitsOnly],
           style: FontStyles.inputHint,
           decoration: InputDecoration(
-            hintText: widget.hintText,
-            hintStyle: FontStyles.inputHint,
-            labelStyle: FontStyles.inputLabel,
             prefixIcon: Image.asset("assets/images/money-symbol.png"),
             enabledBorder: OutlineInputBorder(
               borderSide: BorderSide(color: Colors.grey.shade300),

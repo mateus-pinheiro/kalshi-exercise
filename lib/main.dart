@@ -20,6 +20,15 @@ class KalshiApp extends StatelessWidget {
     return MaterialApp.router(
       title: 'Kalshi Exercise',
       routerConfig: AppRouter.router,
+      theme: ThemeData(
+        primarySwatch: Colors.blue,
+        fontFamily: 'WorkSans',
+        elevatedButtonTheme: ElevatedButtonThemeData(
+          style: ElevatedButton.styleFrom(
+            backgroundColor: Colors.white
+          ),
+        ),
+      ),
     );
   }
 }

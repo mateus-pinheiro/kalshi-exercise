@@ -1,0 +1,8 @@
+base_locale: en
+input_directory: assets/i18n
+output_directory: lib/src/presentation/shared/i18n
+imports:
+  - 'package:kalshi_exercise/src/domain/entities/wellness_enum.dart'
+contexts:
+  FinancialWellnessStatus:
+    generate_enum: false

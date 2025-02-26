@@ -1,0 +1,33 @@
+{
+    "financialWellnessTestPage": {
+        "title(rich)": "Let's find out your ${bold(financial wellness score.)}",
+        "form": {
+            "title": "Financial wellness test",
+            "description": "Enter your financial information below",
+            "annualIncomeField": "Annual Income",
+            "monthlyCostsField": "Monthly Costs",
+            "button": "Continue"
+        }
+    },
+    "financialWellnessResultPage": {
+        "title(rich)": "Here's your ${bold(financial wellness score.)}",
+        "form": {
+            "title": "Congratulations!",
+            "description(rich)": "Your financial wellness score is ${bold(Healthy)}",
+            "button": "Return"
+        }
+    },
+    "securityInfo": "Your financial information is encrypted and secure. We'll never share or sell any of your personal data.",
+    "financialWellnessEnum": {
+        "text(context=FinancialWellnessStatus,param=financialWellnessStatus)": {
+            "healthy": "Healthy",
+            "medium": "Average",
+            "low": "Unhealthy"
+        },
+        "description(context=FinancialWellnessStatus,param=financialWellnessStatus)": {
+            "healthy": "Congratulations!",
+            "medium": "There is room for improvement.",
+            "low": "Caution!"
+        }
+    }
+}

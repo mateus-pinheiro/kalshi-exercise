@@ -3,9 +3,37 @@ import 'package:flutter/material.dart';
 class FontStyles {
   static const TextStyle title = TextStyle(
     fontFamily: 'Rubik',
+    fontWeight: FontWeight.w400,
+    fontSize: 18,
+    color: Color.fromRGBO(27, 49, 168, 1),
+  );
+
+  static const TextStyle titleBold = TextStyle(
+    fontFamily: 'Rubik',
+    fontWeight: FontWeight.w600,
+    fontSize: 20,
+    color: Color.fromRGBO(0, 28, 149, 1),
+  );
+
+  static const TextStyle cardTitle = TextStyle(
+    fontFamily: 'Rubik',
     fontWeight: FontWeight.w600,
     fontSize: 20,
     color: Color.fromRGBO(30, 42, 50, 1),
+  );
+
+  static const TextStyle cardDescription = TextStyle(
+    fontFamily: 'WorkSans',
+    fontWeight: FontWeight.w400,
+    fontSize: 14,
+    color: Color.fromRGBO(77, 100, 117, 1),
+  );
+
+  static const TextStyle cardDescriptionBold = TextStyle(
+    fontFamily: 'WorkSans',
+    fontWeight: FontWeight.w600,
+    fontSize: 14,
+    color: Color.fromRGBO(77, 100, 117, 1),
   );
 
   static const TextStyle subtitle = TextStyle(
@@ -35,25 +63,6 @@ class FontStyles {
     fontSize: 16,
   );
 
-  static const TextStyle error = TextStyle(
-    fontSize: 14,
-    color: Colors.red,
-  );
-
-  static const TextStyle success = TextStyle(
-    fontSize: 14,
-    color: Colors.green,
-  );
-
-  static const TextStyle link = TextStyle(
-    fontSize: 14,
-    color: Colors.blue,
-  );
-
-  static const TextStyle input = TextStyle(
-    fontSize: 16,
-  );
-
   static const TextStyle inputHint = TextStyle(
     fontFamily: 'Rubik',
     fontWeight: FontWeight.w600,
@@ -71,54 +80,5 @@ class FontStyles {
     fontWeight: FontWeight.w600,
     fontSize: 24,
     color: Color.fromRGBO(77, 100, 117, 1),
-  );
-
-  static const TextStyle inputCounter = TextStyle(
-    fontSize: 12,
-    color: Colors.grey,
-  );
-
-  static const TextStyle inputDecoration = TextStyle(
-    fontSize: 16,
-  );
-
-  static const TextStyle inputDecorationError = TextStyle(
-    fontSize: 16,
-    color: Colors.red,
-  );
-
-  static const TextStyle inputDecorationHint = TextStyle(
-    fontSize: 16,
-    color: Colors.grey,
-  );
-
-  static const TextStyle inputDecorationLabel = TextStyle(
-    fontSize: 16,
-    color: Colors.grey,
-  );
-
-  static const TextStyle inputDecorationCounter = TextStyle(
-    fontSize: 12,
-    color: Colors.grey,
-  );
-
-  static const TextStyle inputDecorationFocused = TextStyle(
-    fontSize: 16,
-    color: Colors.blue,
-  );
-
-  static const TextStyle inputDecorationFocusedError = TextStyle(
-    fontSize: 16,
-    color: Colors.red,
-  );
-
-  static const TextStyle inputDecorationFocusedHint = TextStyle(
-    fontSize: 16,
-    color: Colors.grey,
-  );
-
-  static const TextStyle inputDecorationFocusedLabel = TextStyle(
-    fontSize: 16,
-    color: Colors.blue,
   );
 }

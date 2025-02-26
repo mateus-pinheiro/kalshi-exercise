@@ -1,8 +1,8 @@
-class AccountWellnessEntity {
+class FinancialWellnessEntity {
   final double annualGrossIncome;
   final double averageMonthlyCosts;
 
-  AccountWellnessEntity(
+  FinancialWellnessEntity(
     this.annualGrossIncome,
     this.averageMonthlyCosts,
   );

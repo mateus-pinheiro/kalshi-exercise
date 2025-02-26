@@ -1,5 +1,5 @@
 import 'package:go_router/go_router.dart';
-import 'package:kalshi_exercise/src/presentation/account_wellness/pages/pages.dart';
+import 'package:kalshi_exercise/src/presentation/financial_wellness/pages/pages.dart';
 
 class AppRouter {
   static late GoRouter router;

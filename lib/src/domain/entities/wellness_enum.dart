@@ -1,0 +1,1 @@
+enum FinancialWellnessStatus { healthy, medium, low }
