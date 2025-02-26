@@ -1,22 +1,25 @@
 import 'package:flutter/material.dart';
-import 'package:kalshi_exercise/core/di.dart';
-import 'package:kalshi_exercise/presentation/pages/account_wellness_input_page.dart';
+import 'package:kalshi_exercise/src/core/app_router.dart';
+import 'package:kalshi_exercise/src/core/di.dart';
 
 void main() {
   setup();
-  runApp(const AccountWellnessInputPage());
+  runApp(const KalshiApp());
 }
 
 void setup() {
   registerDependencies();
+  AppRouter().setupRoutes();
 }
 
-class MyApp extends StatelessWidget {
-  const MyApp({super.key});
+class KalshiApp extends StatelessWidget {
+  const KalshiApp({super.key});
 
   @override
   Widget build(BuildContext context) {
-    // wellness();
-    return Container();
+    return MaterialApp.router(
+      title: 'Kalshi Exercise',
+      routerConfig: AppRouter.router,
+    );
   }
 }
