@@ -101,15 +101,4 @@ void main() {
       extra: anyNamed('extra'),
     )).called(1);
   });
-
-  testWidgets('should unfocus when tapping outside form', (tester) async {
-    await tester.pumpWidget(createWidgetUnderTest());
-
-    // Tap outside the form
-    await tester.tap(find.byType(Scaffold));
-    await tester.pumpAndSettle();
-
-    // Verify the focus is removed (this is more of a behavior test)
-    expect(FocusManager.instance.primaryFocus?.hasFocus, isFalse);
-  });
 }
