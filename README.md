@@ -78,7 +78,6 @@ Each use case in the application follows this pattern, ensuring:
 
 ### Navigation
 - **go_router (^14.8.0)**: Declarative routing solution
-  - Supports deep linking
   - Type-safe route parameters
   - Nested navigation support
 
@@ -91,7 +90,7 @@ Each use case in the application follows this pattern, ensuring:
 ### Error Handling
 - **either_dart (^1.0.0)**: Functional error handling
   - Type-safe error handling
-  - Eliminates null checks
+  - Eliminates null checks and try-catchs
   - Improves error propagation
 
 ### UI Components
@@ -241,11 +240,10 @@ lib/
 - Input validation on all forms
 - Secure navigation implementation
 
-## Future Improvements
-- Offline support
-- More detailed financial analysis
-- Historical data tracking
-- Additional financial wellness metrics
+## Technical Future Improvements
+- Create a complete theme for the app
+- Create testing for widgets
+- Create a network handler for API calls
 - Support for more locales
 
 ## Contributing
@@ -255,4 +253,4 @@ lib/
 4. Create a pull request
 
 ## License
-This project is proprietary and confidential.
+This project is not for production.

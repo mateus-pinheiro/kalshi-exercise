@@ -3,8 +3,6 @@ import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:flutter_test/flutter_test.dart';
 import 'package:go_router/go_router.dart';
 import 'package:kalshi_exercise/src/core/di.dart';
-import 'package:mocktail/mocktail.dart';
-
 import 'package:kalshi_exercise/src/core/app_router.dart';
 import 'package:kalshi_exercise/src/domain/entities/financial_wellness_entity.dart';
 import 'package:kalshi_exercise/src/domain/entities/wellness_enum.dart';
@@ -12,8 +10,10 @@ import 'package:kalshi_exercise/src/presentation/financial_wellness/bloc/cubit/f
 import 'package:kalshi_exercise/src/presentation/financial_wellness/bloc/state/financial_wellness_state.dart';
 import 'package:kalshi_exercise/src/presentation/financial_wellness/pages/financial_wellness_input_page.dart';
 import 'package:kalshi_exercise/src/presentation/shared/shared.dart';
+import 'package:mockito/mockito.dart';
 
-class MockFinancialWellnessCubit extends Mock implements FinancialWellnessCubit {}
+class MockFinancialWellnessCubit extends Mock
+    implements FinancialWellnessCubit {}
 
 class MockGoRouter extends Mock implements GoRouter {}
 
@@ -30,7 +30,6 @@ void main() {
           extra: any(named: 'extra'),
         )).thenAnswer((_) async => null);
   });
-
 
   Widget createWidgetUnderTest() {
     return MaterialApp(
