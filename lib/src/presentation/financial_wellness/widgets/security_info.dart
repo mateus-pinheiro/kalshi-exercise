@@ -1,6 +1,8 @@
 import 'package:flutter/material.dart';
-import 'package:kalshi_exercise/src/presentation/shared/i18n/strings.g.dart';
-import 'package:kalshi_exercise/src/presentation/shared/styles/font_styles.dart';
+
+import '../../shared/i18n/strings.g.dart';
+import '../../shared/styles/font_styles.dart';
+import '../../shared/styles/spacings.dart';
 
 class SecurityInfo extends StatelessWidget {
   const SecurityInfo({
@@ -17,7 +19,7 @@ class SecurityInfo extends StatelessWidget {
           color: Color.fromRGBO(138, 156, 169, 1),
         ),
         Padding(
-          padding: EdgeInsets.symmetric(horizontal: 40),
+          padding: EdgeInsets.symmetric(horizontal: Paddings.xxxl),
           child: Text(
             t.securityInfo,
             style: FontStyles.body,

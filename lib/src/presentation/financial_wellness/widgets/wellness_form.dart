@@ -1,8 +1,10 @@
 import 'package:flutter/material.dart';
 import 'package:kalshi_exercise/src/domain/entities/financial_wellness_entity.dart';
-import 'package:kalshi_exercise/src/presentation/shared/i18n/strings.g.dart';
-import 'package:kalshi_exercise/src/presentation/shared/widgets/kalshi_button.dart';
-import 'package:kalshi_exercise/src/presentation/shared/widgets/kalshi_textfield.dart';
+
+import '../../shared/i18n/strings.g.dart';
+import '../../shared/shared.dart';
+import '../../shared/styles/spacings.dart';
+
 
 class KalshiForm extends StatefulWidget {
   const KalshiForm({super.key, required this.onContinue});
@@ -29,7 +31,7 @@ class _KalshiFormState extends State<KalshiForm> {
     return Form(
       key: _formKey,
       child: Column(
-        spacing: 16,
+        spacing: Paddings.m,
         children: [
           KalshiTextField(
             title: t.financialWellnessTestPage.form.annualIncomeField,

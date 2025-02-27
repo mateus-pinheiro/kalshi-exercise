@@ -1,7 +1,8 @@
 import 'package:flutter_bloc/flutter_bloc.dart';
-import 'package:kalshi_exercise/src/domain/entities/financial_wellness_entity.dart';
-import 'package:kalshi_exercise/src/domain/usecases/get_financial_wellness_usecase.dart';
-import 'package:kalshi_exercise/src/presentation/financial_wellness/bloc/state/financial_wellness_state.dart';
+
+import '../../../../domain/entities/financial_wellness_entity.dart';
+import '../../../../domain/usecases/get_financial_wellness_usecase.dart';
+import '../state/financial_wellness_state.dart';
 
 class FinancialWellnessCubit extends Cubit<FinancialWellnessState> {
   FinancialWellnessCubit(

@@ -1,8 +1,9 @@
 import 'package:either_dart/either.dart';
-import 'package:kalshi_exercise/src/core/usecase.dart';
-import 'package:kalshi_exercise/src/domain/entities/financial_wellness_entity.dart';
-import 'package:kalshi_exercise/src/domain/entities/wellness_enum.dart';
-import 'package:kalshi_exercise/src/domain/failures/financial_wellness_failure.dart';
+
+import '../../core/usecase.dart';
+import '../entities/financial_wellness_entity.dart';
+import '../entities/wellness_enum.dart';
+import '../failures/financial_wellness_failure.dart';
 
 const double annualTaxRate = 0.08;
 const double monthsInYear = 12;

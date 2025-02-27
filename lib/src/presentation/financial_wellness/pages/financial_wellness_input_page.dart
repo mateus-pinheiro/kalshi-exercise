@@ -2,18 +2,18 @@ import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:flutter_svg/svg.dart';
 import 'package:go_router/go_router.dart';
-import 'package:kalshi_exercise/src/core/app_router.dart';
-import 'package:kalshi_exercise/src/core/di.dart';
-import 'package:kalshi_exercise/src/domain/entities/financial_wellness_entity.dart';
-import 'package:kalshi_exercise/src/presentation/financial_wellness/bloc/cubit/financial_wellness_cubit.dart';
-import 'package:kalshi_exercise/src/presentation/financial_wellness/bloc/state/financial_wellness_state.dart';
-import 'package:kalshi_exercise/src/presentation/financial_wellness/pages/financial_wellness_result_page.dart';
-import 'package:kalshi_exercise/src/presentation/financial_wellness/widgets/security_info.dart';
-import 'package:kalshi_exercise/src/presentation/shared/i18n/strings.g.dart';
-import 'package:kalshi_exercise/src/presentation/shared/styles/font_styles.dart';
-import 'package:kalshi_exercise/src/presentation/shared/styles/spacings.dart';
-import 'package:kalshi_exercise/src/presentation/shared/widgets/kalshi_appbar.dart';
-import 'package:kalshi_exercise/src/presentation/financial_wellness/widgets/wellness_form.dart';
+
+import '../../../core/app_router.dart';
+import '../../../core/di.dart';
+import '../../../domain/entities/financial_wellness_entity.dart';
+import '../../shared/i18n/strings.g.dart';
+import '../../shared/shared.dart';
+import '../../shared/styles/font_styles.dart';
+import '../../shared/styles/spacings.dart';
+import '../bloc/cubit/financial_wellness_cubit.dart';
+import '../bloc/state/financial_wellness_state.dart';
+import '../widgets/security_info.dart';
+import 'financial_wellness_result_page.dart';
 
 class AccountWellnessInputPage extends StatefulWidget {
   const AccountWellnessInputPage({super.key});

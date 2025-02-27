@@ -1,5 +1,5 @@
-import 'package:kalshi_exercise/src/domain/entities/wellness_enum.dart';
-import 'package:kalshi_exercise/src/domain/failures/financial_wellness_failure.dart';
+import '../../../../domain/entities/wellness_enum.dart';
+import '../../../../domain/failures/financial_wellness_failure.dart';
 
 class FinancialWellnessState {}
 
