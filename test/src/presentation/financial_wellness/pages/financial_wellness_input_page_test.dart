@@ -10,25 +10,43 @@ import 'package:kalshi_exercise/src/presentation/financial_wellness/bloc/cubit/f
 import 'package:kalshi_exercise/src/presentation/financial_wellness/bloc/state/financial_wellness_state.dart';
 import 'package:kalshi_exercise/src/presentation/financial_wellness/pages/financial_wellness_input_page.dart';
 import 'package:kalshi_exercise/src/presentation/shared/shared.dart';
+import 'package:mockito/annotations.dart';
 import 'package:mockito/mockito.dart';
 
-class MockFinancialWellnessCubit extends Mock
-    implements FinancialWellnessCubit {}
+import 'financial_wellness_input_page_test.mocks.dart';
 
-class MockGoRouter extends Mock implements GoRouter {}
-
+@GenerateMocks([FinancialWellnessCubit, FinancialWellnessState, GoRouter])
 void main() {
-  late FinancialWellnessCubit mockCubit;
+  late MockFinancialWellnessCubit mockCubit;
+  late MockFinancialWellnessState mockState;
   late MockGoRouter mockGoRouter;
 
   setUp(() {
     mockCubit = MockFinancialWellnessCubit();
+    mockState = MockFinancialWellnessState();
     mockGoRouter = MockGoRouter();
 
-    when(() => mockGoRouter.pushNamed(
-          any(),
-          extra: any(named: 'extra'),
-        )).thenAnswer((_) async => null);
+    // Register mock cubit with GetIt
+    getIt.registerSingleton<FinancialWellnessCubit>(mockCubit);
+
+    when(mockCubit.state).thenAnswer((_) => mockState);
+    when(mockCubit.stream).thenAnswer(
+      (_) => Stream.value(
+        FinancialWellnessSuccessfullyState(
+          FinancialWellnessStatus.healthy,
+        ),
+      ),
+    );
+
+    when(mockGoRouter.pushNamed(
+      any,
+      extra: anyNamed('extra'),
+    )).thenAnswer((_) async => null);
+  });
+
+  tearDown(() {
+    // Unregister mock cubit
+    getIt.unregister<FinancialWellnessCubit>();
   });
 
   Widget createWidgetUnderTest() {
@@ -64,14 +82,7 @@ void main() {
       5000.0, // average monthly costs
     );
 
-    when(() => mockCubit.financialWellness(entity)).thenAnswer((_) async {});
-    when(() => mockCubit.stream).thenAnswer(
-      (_) => Stream.value(
-        FinancialWellnessSuccessfullyState(
-          FinancialWellnessStatus.healthy,
-        ),
-      ),
-    );
+    when(mockCubit.financialWellness(entity)).thenAnswer((_) async {});
 
     await tester.pumpWidget(createWidgetUnderTest());
     await tester.pumpAndSettle();
@@ -85,10 +96,10 @@ void main() {
     await tester.pumpAndSettle();
 
     // Verify navigation
-    verify(() => mockGoRouter.pushNamed(
-          AppRoutes.result,
-          extra: any(named: 'extra'),
-        )).called(1);
+    verify(mockGoRouter.pushNamed(
+      AppRoutes.result,
+      extra: anyNamed('extra'),
+    )).called(1);
   });
 
   testWidgets('should unfocus when tapping outside form', (tester) async {

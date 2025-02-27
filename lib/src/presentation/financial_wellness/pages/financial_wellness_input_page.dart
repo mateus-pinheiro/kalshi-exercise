@@ -47,7 +47,9 @@ class _AccountWellnessInputPageState extends State<AccountWellnessInputPage> {
       },
       bloc: _cubit,
       child: GestureDetector(
-        onTap: () => FocusManager.instance.primaryFocus?.unfocus(),
+        onTap: () {
+          FocusManager.instance.primaryFocus?.unfocus();
+        },
         child: Scaffold(
           appBar: KalshiAppbar(),
           body: _AccountWellnessInputBody(onSubmittedCallback),

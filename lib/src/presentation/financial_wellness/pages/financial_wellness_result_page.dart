@@ -28,16 +28,18 @@ class AccountWellnessResultPage extends StatelessWidget {
       appBar: KalshiAppbar(),
       backgroundColor: Colors.blueGrey[50],
       body: SafeArea(
-        child: Column(
-          spacing: Paddings.l,
-          crossAxisAlignment: CrossAxisAlignment.center,
-          children: [
-            const SizedBox(height: Paddings.l),
-            const _HeaderText(),
-            ScoreCard(status: args.status),
-            const SizedBox(height: Paddings.l),
-            const SecurityInfo(),
-          ],
+        child: SingleChildScrollView(
+          child: Column(
+            spacing: Paddings.l,
+            crossAxisAlignment: CrossAxisAlignment.center,
+            children: [
+              const SizedBox(height: Paddings.l),
+              const _HeaderText(),
+              ScoreCard(status: args.status),
+              const SizedBox(height: Paddings.l),
+              const SecurityInfo(),
+            ],
+          ),
         ),
       ),
     );

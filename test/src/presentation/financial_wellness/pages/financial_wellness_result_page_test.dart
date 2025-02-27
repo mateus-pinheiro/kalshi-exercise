@@ -1,16 +1,21 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_test/flutter_test.dart';
-
+import 'package:mockito/annotations.dart';
 import 'package:kalshi_exercise/src/domain/entities/wellness_enum.dart';
 import 'package:kalshi_exercise/src/presentation/financial_wellness/pages/financial_wellness_result_page.dart';
 import 'package:kalshi_exercise/src/presentation/financial_wellness/widgets/score_card.dart';
 import 'package:kalshi_exercise/src/presentation/shared/shared.dart';
 import 'package:kalshi_exercise/src/presentation/financial_wellness/widgets/security_info.dart';
 
+@GenerateMocks([ScoreCard])
 void main() {
-  final testArgs = AccountWellnessResultPageArguments(
-    status: FinancialWellnessStatus.healthy,
-  );
+  late AccountWellnessResultPageArguments testArgs;
+
+  setUp(() {
+    testArgs = AccountWellnessResultPageArguments(
+      status: FinancialWellnessStatus.healthy,
+    );
+  });
 
   Widget createWidgetUnderTest() {
     return MaterialApp(
@@ -33,38 +38,32 @@ void main() {
     expect(scoreCard.status, equals(FinancialWellnessStatus.healthy));
   });
 
-  group('test different wellness statuses', () {
+  group('test different wellness status', () {
     testWidgets('should handle healthy status', (tester) async {
-      final args = AccountWellnessResultPageArguments(
+      testArgs = AccountWellnessResultPageArguments(
         status: FinancialWellnessStatus.healthy,
       );
-      await tester.pumpWidget(MaterialApp(
-        home: AccountWellnessResultPage(args: args),
-      ));
+      await tester.pumpWidget(createWidgetUnderTest());
 
       final scoreCard = tester.widget<ScoreCard>(find.byType(ScoreCard));
       expect(scoreCard.status, equals(FinancialWellnessStatus.healthy));
     });
 
     testWidgets('should handle medium status', (tester) async {
-      final args = AccountWellnessResultPageArguments(
+      testArgs = AccountWellnessResultPageArguments(
         status: FinancialWellnessStatus.medium,
       );
-      await tester.pumpWidget(MaterialApp(
-        home: AccountWellnessResultPage(args: args),
-      ));
+      await tester.pumpWidget(createWidgetUnderTest());
 
       final scoreCard = tester.widget<ScoreCard>(find.byType(ScoreCard));
       expect(scoreCard.status, equals(FinancialWellnessStatus.medium));
     });
 
     testWidgets('should handle low status', (tester) async {
-      final args = AccountWellnessResultPageArguments(
+      testArgs = AccountWellnessResultPageArguments(
         status: FinancialWellnessStatus.low,
       );
-      await tester.pumpWidget(MaterialApp(
-        home: AccountWellnessResultPage(args: args),
-      ));
+      await tester.pumpWidget(createWidgetUnderTest());
 
       final scoreCard = tester.widget<ScoreCard>(find.byType(ScoreCard));
       expect(scoreCard.status, equals(FinancialWellnessStatus.low));
