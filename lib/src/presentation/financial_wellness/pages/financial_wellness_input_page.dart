@@ -33,11 +33,14 @@ class _AccountWellnessInputPageState extends State<AccountWellnessInputPage> {
   Widget build(BuildContext context) {
     return BlocListener<FinancialWellnessCubit, FinancialWellnessState>(
       listener: (context, state) {
-        if (state is FinancialWellnessSuccessfullyState) {
+        if (state
+            case FinancialWellnessSuccessfullyState(
+              :final financialWellnessStatus,
+            )) {
           context.pushNamed(
             AppRoutes.result,
             extra: AccountWellnessResultPageArguments(
-              status: state.financialWellnessStatus,
+              status: financialWellnessStatus,
             ),
           );
         }
