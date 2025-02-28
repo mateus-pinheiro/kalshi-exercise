@@ -164,7 +164,6 @@ The application uses two custom font families:
 ```
 lib/
 ├── main.dart           # Application entry point
-├── gen/               # Generated files (i18n)
 └── src/
     ├── core/          # Core utilities
     │   ├── app_router.dart    # Navigation routes
