@@ -3,6 +3,8 @@
 ## Overview
 This Flutter application implements a financial wellness assessment tool using Clean Architecture principles. The app allows users to input their financial information and receive a wellness assessment based on their financial health indicators.
 
+https://github.com/user-attachments/assets/7b28ddf9-1c23-4c0a-ad2c-f63bc92ceb6c
+
 ## Architecture
 
 ### Clean Architecture Implementation
@@ -162,7 +164,6 @@ The application uses two custom font families:
 ```
 lib/
 ├── main.dart           # Application entry point
-├── gen/               # Generated files (i18n)
 └── src/
     ├── core/          # Core utilities
     │   ├── app_router.dart    # Navigation routes
