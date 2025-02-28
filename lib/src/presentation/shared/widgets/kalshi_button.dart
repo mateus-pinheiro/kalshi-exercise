@@ -45,8 +45,8 @@ class KalshiButton extends StatelessWidget {
       width: double.infinity,
       child: ElevatedButton(
         style: ButtonStyle(
-          backgroundColor: MaterialStateProperty.all(backgroundColor),
-          shape: MaterialStateProperty.all(
+          backgroundColor: WidgetStateProperty.all(backgroundColor),
+          shape: WidgetStateProperty.all(
             RoundedRectangleBorder(
               borderRadius: BorderRadius.circular(32),
               side: BorderSide(color: borderColor ?? backgroundColor, width: 1.8),
