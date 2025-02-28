@@ -186,9 +186,9 @@ lib/
    ```bash
    flutter pub get
    ```
-3. Generate internationalization files:
+3. Generate internationalization, object files for freezed and mockito files:
    ```bash
-   flutter pub run build_runner build
+   dart run build_runner build --delete-conflicting-outputs
    ```
 4. Run tests:
    ```bash
