@@ -93,6 +93,31 @@ Each use case in the application follows this pattern, ensuring:
   - Eliminates null checks and try-catchs
   - Improves error propagation
 
+### Code Generation
+- **freezed (^2.4.7)**: Code generation for data classes
+  - Immutable state management
+  - Union types / sealed classes for state handling
+  - Pattern matching support
+  - Automatic toString, equality, and hashCode implementations
+  - Example implementation in state management:
+    ```dart
+    @Freezed(equal: false)
+    sealed class FinancialWellnessState with _$FinancialWellnessState {
+      const FinancialWellnessState._();
+
+      factory FinancialWellnessState.initial() = FinancialWellnessStateInitial;
+
+      factory FinancialWellnessState.error({
+        @Default(FinancialWellnessFailure("Generic Error"))
+        FinancialWellnessFailure failure,
+      }) = FinancialWellnessStateError;
+
+      factory FinancialWellnessState.success({
+        required FinancialWellnessStatus financialWellnessStatus,
+      }) = FinancialWellnessStateSuccess;
+    }
+    ```
+
 ### UI Components
 - **flutter_svg (^2.0.17)**: SVG rendering support
   - Used for displaying vector graphics
@@ -105,6 +130,8 @@ Each use case in the application follows this pattern, ensuring:
 
 ### Development Tools
 - **build_runner (^2.4.15)**: Code generation tool
+- **freezed_annotation**: Annotations for freezed code generation
+- **freezed**: Code generation for immutable classes
 - **slang_build_runner (^4.4.2)**: Generates type-safe translations
 - **flutter_lints (^5.0.0)**: Lint rules for consistent code style
 
