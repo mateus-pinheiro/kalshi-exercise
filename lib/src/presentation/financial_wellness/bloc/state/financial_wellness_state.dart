@@ -1,27 +1,22 @@
-import 'package:equatable/equatable.dart';
+import 'package:freezed_annotation/freezed_annotation.dart';
+import 'package:kalshi_exercise/src/domain/failures/financial_wellness_failure.dart';
 
 import '../../../../domain/entities/wellness_enum.dart';
-import '../../../../domain/failures/financial_wellness_failure.dart';
 
-class FinancialWellnessState extends Equatable {
-  @override
-  List<Object?> get props => [];
-}
+part 'financial_wellness_state.freezed.dart';
 
-class FinancialWellnessSuccessfullyState extends FinancialWellnessState {
-  final FinancialWellnessStatus financialWellnessStatus;
+@Freezed(equal: false)
+sealed class FinancialWellnessState with _$FinancialWellnessState {
+  const FinancialWellnessState._();
 
-  @override
-  List<Object?> get props => [financialWellnessStatus];
+  factory FinancialWellnessState.initial() = FinancialWellnessStateInitial;
 
-  FinancialWellnessSuccessfullyState(this.financialWellnessStatus);
-}
+  factory FinancialWellnessState.error({
+    @Default(FinancialWellnessFailure("Generic Error"))
+    FinancialWellnessFailure failure,
+  }) = FinancialWellnessStateError;
 
-class FinancialWellnessFailState extends FinancialWellnessState {
-  final FinancialWellnessFailure financialWellnessFailure;
-
-  @override
-  List<Object?> get props => [financialWellnessFailure];
-
-  FinancialWellnessFailState(this.financialWellnessFailure);
+  factory FinancialWellnessState.success({
+    required FinancialWellnessStatus financialWellnessStatus,
+  }) = FinancialWellnessStateSuccess;
 }

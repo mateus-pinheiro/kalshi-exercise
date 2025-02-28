@@ -26,8 +26,13 @@ import 'package:mockito/src/dummies.dart' as _i6;
 // ignore_for_file: subtype_of_sealed_class
 
 class _FakeWidget_0 extends _i1.SmartFake implements _i2.Widget {
-  _FakeWidget_0(Object parent, Invocation parentInvocation)
-    : super(parent, parentInvocation);
+  _FakeWidget_0(
+    Object parent,
+    Invocation parentInvocation,
+  ) : super(
+          parent,
+          parentInvocation,
+        );
 
   @override
   String toString({_i2.DiagnosticLevel? minLevel = _i2.DiagnosticLevel.info}) =>
@@ -36,8 +41,13 @@ class _FakeWidget_0 extends _i1.SmartFake implements _i2.Widget {
 
 class _FakeStatelessElement_1 extends _i1.SmartFake
     implements _i2.StatelessElement {
-  _FakeStatelessElement_1(Object parent, Invocation parentInvocation)
-    : super(parent, parentInvocation);
+  _FakeStatelessElement_1(
+    Object parent,
+    Invocation parentInvocation,
+  ) : super(
+          parent,
+          parentInvocation,
+        );
 
   @override
   String toString({_i2.DiagnosticLevel? minLevel = _i2.DiagnosticLevel.info}) =>
@@ -46,14 +56,20 @@ class _FakeStatelessElement_1 extends _i1.SmartFake
 
 class _FakeDiagnosticsNode_2 extends _i1.SmartFake
     implements _i2.DiagnosticsNode {
-  _FakeDiagnosticsNode_2(Object parent, Invocation parentInvocation)
-    : super(parent, parentInvocation);
+  _FakeDiagnosticsNode_2(
+    Object parent,
+    Invocation parentInvocation,
+  ) : super(
+          parent,
+          parentInvocation,
+        );
 
   @override
   String toString({
     _i3.TextTreeConfiguration? parentConfiguration,
     _i2.DiagnosticLevel? minLevel = _i2.DiagnosticLevel.info,
-  }) => super.toString();
+  }) =>
+      super.toString();
 }
 
 /// A class which mocks [ScoreCard].
@@ -65,50 +81,63 @@ class MockScoreCard extends _i1.Mock implements _i4.ScoreCard {
   }
 
   @override
-  _i5.FinancialWellnessStatus get status =>
-      (super.noSuchMethod(
-            Invocation.getter(#status),
-            returnValue: _i5.FinancialWellnessStatus.healthy,
-          )
-          as _i5.FinancialWellnessStatus);
+  _i5.FinancialWellnessStatus get status => (super.noSuchMethod(
+        Invocation.getter(#status),
+        returnValue: _i5.FinancialWellnessStatus.healthy,
+      ) as _i5.FinancialWellnessStatus);
 
   @override
-  _i2.Widget build(_i2.BuildContext? context) =>
-      (super.noSuchMethod(
-            Invocation.method(#build, [context]),
-            returnValue: _FakeWidget_0(
-              this,
-              Invocation.method(#build, [context]),
-            ),
-          )
-          as _i2.Widget);
+  _i2.Widget build(_i2.BuildContext? context) => (super.noSuchMethod(
+        Invocation.method(
+          #build,
+          [context],
+        ),
+        returnValue: _FakeWidget_0(
+          this,
+          Invocation.method(
+            #build,
+            [context],
+          ),
+        ),
+      ) as _i2.Widget);
 
   @override
-  _i2.StatelessElement createElement() =>
-      (super.noSuchMethod(
-            Invocation.method(#createElement, []),
-            returnValue: _FakeStatelessElement_1(
-              this,
-              Invocation.method(#createElement, []),
-            ),
-          )
-          as _i2.StatelessElement);
+  _i2.StatelessElement createElement() => (super.noSuchMethod(
+        Invocation.method(
+          #createElement,
+          [],
+        ),
+        returnValue: _FakeStatelessElement_1(
+          this,
+          Invocation.method(
+            #createElement,
+            [],
+          ),
+        ),
+      ) as _i2.StatelessElement);
 
   @override
-  String toStringShort() =>
-      (super.noSuchMethod(
-            Invocation.method(#toStringShort, []),
-            returnValue: _i6.dummyValue<String>(
-              this,
-              Invocation.method(#toStringShort, []),
-            ),
-          )
-          as String);
+  String toStringShort() => (super.noSuchMethod(
+        Invocation.method(
+          #toStringShort,
+          [],
+        ),
+        returnValue: _i6.dummyValue<String>(
+          this,
+          Invocation.method(
+            #toStringShort,
+            [],
+          ),
+        ),
+      ) as String);
 
   @override
   void debugFillProperties(_i3.DiagnosticPropertiesBuilder? properties) =>
       super.noSuchMethod(
-        Invocation.method(#debugFillProperties, [properties]),
+        Invocation.method(
+          #debugFillProperties,
+          [properties],
+        ),
         returnValueForMissingStub: null,
       );
 
@@ -118,19 +147,26 @@ class MockScoreCard extends _i1.Mock implements _i4.ScoreCard {
     _i2.DiagnosticLevel? minLevel = _i2.DiagnosticLevel.debug,
   }) =>
       (super.noSuchMethod(
-            Invocation.method(#toStringShallow, [], {
+        Invocation.method(
+          #toStringShallow,
+          [],
+          {
+            #joiner: joiner,
+            #minLevel: minLevel,
+          },
+        ),
+        returnValue: _i6.dummyValue<String>(
+          this,
+          Invocation.method(
+            #toStringShallow,
+            [],
+            {
               #joiner: joiner,
               #minLevel: minLevel,
-            }),
-            returnValue: _i6.dummyValue<String>(
-              this,
-              Invocation.method(#toStringShallow, [], {
-                #joiner: joiner,
-                #minLevel: minLevel,
-              }),
-            ),
-          )
-          as String);
+            },
+          ),
+        ),
+      ) as String);
 
   @override
   String toStringDeep({
@@ -140,23 +176,30 @@ class MockScoreCard extends _i1.Mock implements _i4.ScoreCard {
     int? wrapWidth = 65,
   }) =>
       (super.noSuchMethod(
-            Invocation.method(#toStringDeep, [], {
+        Invocation.method(
+          #toStringDeep,
+          [],
+          {
+            #prefixLineOne: prefixLineOne,
+            #prefixOtherLines: prefixOtherLines,
+            #minLevel: minLevel,
+            #wrapWidth: wrapWidth,
+          },
+        ),
+        returnValue: _i6.dummyValue<String>(
+          this,
+          Invocation.method(
+            #toStringDeep,
+            [],
+            {
               #prefixLineOne: prefixLineOne,
               #prefixOtherLines: prefixOtherLines,
               #minLevel: minLevel,
               #wrapWidth: wrapWidth,
-            }),
-            returnValue: _i6.dummyValue<String>(
-              this,
-              Invocation.method(#toStringDeep, [], {
-                #prefixLineOne: prefixLineOne,
-                #prefixOtherLines: prefixOtherLines,
-                #minLevel: minLevel,
-                #wrapWidth: wrapWidth,
-              }),
-            ),
-          )
-          as String);
+            },
+          ),
+        ),
+      ) as String);
 
   @override
   _i2.DiagnosticsNode toDiagnosticsNode({
@@ -164,27 +207,35 @@ class MockScoreCard extends _i1.Mock implements _i4.ScoreCard {
     _i3.DiagnosticsTreeStyle? style,
   }) =>
       (super.noSuchMethod(
-            Invocation.method(#toDiagnosticsNode, [], {
+        Invocation.method(
+          #toDiagnosticsNode,
+          [],
+          {
+            #name: name,
+            #style: style,
+          },
+        ),
+        returnValue: _FakeDiagnosticsNode_2(
+          this,
+          Invocation.method(
+            #toDiagnosticsNode,
+            [],
+            {
               #name: name,
               #style: style,
-            }),
-            returnValue: _FakeDiagnosticsNode_2(
-              this,
-              Invocation.method(#toDiagnosticsNode, [], {
-                #name: name,
-                #style: style,
-              }),
-            ),
-          )
-          as _i2.DiagnosticsNode);
+            },
+          ),
+        ),
+      ) as _i2.DiagnosticsNode);
 
   @override
-  List<_i2.DiagnosticsNode> debugDescribeChildren() =>
-      (super.noSuchMethod(
-            Invocation.method(#debugDescribeChildren, []),
-            returnValue: <_i2.DiagnosticsNode>[],
-          )
-          as List<_i2.DiagnosticsNode>);
+  List<_i2.DiagnosticsNode> debugDescribeChildren() => (super.noSuchMethod(
+        Invocation.method(
+          #debugDescribeChildren,
+          [],
+        ),
+        returnValue: <_i2.DiagnosticsNode>[],
+      ) as List<_i2.DiagnosticsNode>);
 
   @override
   String toString({_i2.DiagnosticLevel? minLevel = _i2.DiagnosticLevel.info}) =>

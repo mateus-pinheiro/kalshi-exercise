@@ -34,7 +34,7 @@ class _AccountWellnessInputPageState extends State<AccountWellnessInputPage> {
     return BlocListener<FinancialWellnessCubit, FinancialWellnessState>(
       listener: (context, state) {
         if (state
-            case FinancialWellnessSuccessfullyState(
+            case FinancialWellnessStateSuccess(
               :final financialWellnessStatus,
             )) {
           context.pushNamed(

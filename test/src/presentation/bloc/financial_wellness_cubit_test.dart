@@ -43,7 +43,10 @@ void main() {
     },
     act: (cubit) => cubit.financialWellness(financialWellnessEntity),
     expect: () => [
-      FinancialWellnessSuccessfullyState(financialWellnessStatus),
+      isA<FinancialWellnessStateSuccess>().having(
+          (state) => state.financialWellnessStatus,
+          'status',
+          FinancialWellnessStatus.medium)
     ],
   );
 
@@ -55,8 +58,6 @@ void main() {
       return financialWellnessCubit;
     },
     act: (cubit) => cubit.financialWellness(financialWellnessEntity),
-    expect: () => [
-      FinancialWellnessFailState(FinancialWellnessFailure('')),
-    ],
+    expect: () => [isA<FinancialWellnessStateError>()],
   );
 }

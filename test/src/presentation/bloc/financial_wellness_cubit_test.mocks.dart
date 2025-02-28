@@ -39,19 +39,21 @@ class MockGetFinancialWellnessUsecase extends _i1.Mock
 
   @override
   _i3.Either<_i4.FinancialWellnessFailure, _i5.FinancialWellnessStatus> call(
-    _i6.FinancialWellnessEntity? params,
-  ) =>
+          _i6.FinancialWellnessEntity? params) =>
       (super.noSuchMethod(
-            Invocation.method(#call, [params]),
-            returnValue: _i7.dummyValue<
-              _i3.Either<
-                _i4.FinancialWellnessFailure,
-                _i5.FinancialWellnessStatus
-              >
-            >(this, Invocation.method(#call, [params])),
-          )
-          as _i3.Either<
-            _i4.FinancialWellnessFailure,
-            _i5.FinancialWellnessStatus
-          >);
+        Invocation.method(
+          #call,
+          [params],
+        ),
+        returnValue: _i7.dummyValue<
+            _i3
+            .Either<_i4.FinancialWellnessFailure, _i5.FinancialWellnessStatus>>(
+          this,
+          Invocation.method(
+            #call,
+            [params],
+          ),
+        ),
+      ) as _i3
+          .Either<_i4.FinancialWellnessFailure, _i5.FinancialWellnessStatus>);
 }

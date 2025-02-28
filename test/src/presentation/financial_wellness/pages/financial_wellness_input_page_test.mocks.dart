@@ -3,25 +3,25 @@
 // Do not manually edit this file.
 
 // ignore_for_file: no_leading_underscores_for_library_prefixes
-import 'dart:async' as _i10;
+import 'dart:async' as _i11;
 
-import 'package:flutter/widgets.dart' as _i4;
-import 'package:flutter_bloc/flutter_bloc.dart' as _i12;
-import 'package:go_router/src/configuration.dart' as _i3;
-import 'package:go_router/src/delegate.dart' as _i5;
-import 'package:go_router/src/information_provider.dart' as _i6;
+import 'package:flutter/widgets.dart' as _i3;
+import 'package:flutter_bloc/flutter_bloc.dart' as _i13;
+import 'package:go_router/src/configuration.dart' as _i2;
+import 'package:go_router/src/delegate.dart' as _i4;
+import 'package:go_router/src/information_provider.dart' as _i5;
 import 'package:go_router/src/match.dart' as _i15;
-import 'package:go_router/src/parser.dart' as _i7;
-import 'package:go_router/src/router.dart' as _i13;
-import 'package:go_router/src/state.dart' as _i8;
+import 'package:go_router/src/parser.dart' as _i6;
+import 'package:go_router/src/router.dart' as _i14;
+import 'package:go_router/src/state.dart' as _i7;
 import 'package:kalshi_exercise/src/domain/entities/financial_wellness_entity.dart'
-    as _i11;
+    as _i12;
 import 'package:kalshi_exercise/src/presentation/financial_wellness/bloc/cubit/financial_wellness_cubit.dart'
-    as _i9;
+    as _i8;
 import 'package:kalshi_exercise/src/presentation/financial_wellness/bloc/state/financial_wellness_state.dart'
-    as _i2;
+    as _i9;
 import 'package:mockito/mockito.dart' as _i1;
-import 'package:mockito/src/dummies.dart' as _i14;
+import 'package:mockito/src/dummies.dart' as _i10;
 
 // ignore_for_file: type=lint
 // ignore_for_file: avoid_redundant_argument_values
@@ -37,251 +37,294 @@ import 'package:mockito/src/dummies.dart' as _i14;
 // ignore_for_file: camel_case_types
 // ignore_for_file: subtype_of_sealed_class
 
-class _FakeFinancialWellnessState_0 extends _i1.SmartFake
-    implements _i2.FinancialWellnessState {
-  _FakeFinancialWellnessState_0(Object parent, Invocation parentInvocation)
-    : super(parent, parentInvocation);
+class _FakeRouteConfiguration_0 extends _i1.SmartFake
+    implements _i2.RouteConfiguration {
+  _FakeRouteConfiguration_0(
+    Object parent,
+    Invocation parentInvocation,
+  ) : super(
+          parent,
+          parentInvocation,
+        );
 }
 
-class _FakeRouteConfiguration_1 extends _i1.SmartFake
-    implements _i3.RouteConfiguration {
-  _FakeRouteConfiguration_1(Object parent, Invocation parentInvocation)
-    : super(parent, parentInvocation);
+class _FakeBackButtonDispatcher_1 extends _i1.SmartFake
+    implements _i3.BackButtonDispatcher {
+  _FakeBackButtonDispatcher_1(
+    Object parent,
+    Invocation parentInvocation,
+  ) : super(
+          parent,
+          parentInvocation,
+        );
 }
 
-class _FakeBackButtonDispatcher_2 extends _i1.SmartFake
-    implements _i4.BackButtonDispatcher {
-  _FakeBackButtonDispatcher_2(Object parent, Invocation parentInvocation)
-    : super(parent, parentInvocation);
+class _FakeGoRouterDelegate_2 extends _i1.SmartFake
+    implements _i4.GoRouterDelegate {
+  _FakeGoRouterDelegate_2(
+    Object parent,
+    Invocation parentInvocation,
+  ) : super(
+          parent,
+          parentInvocation,
+        );
 }
 
-class _FakeGoRouterDelegate_3 extends _i1.SmartFake
-    implements _i5.GoRouterDelegate {
-  _FakeGoRouterDelegate_3(Object parent, Invocation parentInvocation)
-    : super(parent, parentInvocation);
+class _FakeGoRouteInformationProvider_3 extends _i1.SmartFake
+    implements _i5.GoRouteInformationProvider {
+  _FakeGoRouteInformationProvider_3(
+    Object parent,
+    Invocation parentInvocation,
+  ) : super(
+          parent,
+          parentInvocation,
+        );
 }
 
-class _FakeGoRouteInformationProvider_4 extends _i1.SmartFake
-    implements _i6.GoRouteInformationProvider {
-  _FakeGoRouteInformationProvider_4(Object parent, Invocation parentInvocation)
-    : super(parent, parentInvocation);
+class _FakeGoRouteInformationParser_4 extends _i1.SmartFake
+    implements _i6.GoRouteInformationParser {
+  _FakeGoRouteInformationParser_4(
+    Object parent,
+    Invocation parentInvocation,
+  ) : super(
+          parent,
+          parentInvocation,
+        );
 }
 
-class _FakeGoRouteInformationParser_5 extends _i1.SmartFake
-    implements _i7.GoRouteInformationParser {
-  _FakeGoRouteInformationParser_5(Object parent, Invocation parentInvocation)
-    : super(parent, parentInvocation);
-}
-
-class _FakeGoRouterState_6 extends _i1.SmartFake implements _i8.GoRouterState {
-  _FakeGoRouterState_6(Object parent, Invocation parentInvocation)
-    : super(parent, parentInvocation);
+class _FakeGoRouterState_5 extends _i1.SmartFake implements _i7.GoRouterState {
+  _FakeGoRouterState_5(
+    Object parent,
+    Invocation parentInvocation,
+  ) : super(
+          parent,
+          parentInvocation,
+        );
 }
 
 /// A class which mocks [FinancialWellnessCubit].
 ///
 /// See the documentation for Mockito's code generation for more information.
 class MockFinancialWellnessCubit extends _i1.Mock
-    implements _i9.FinancialWellnessCubit {
+    implements _i8.FinancialWellnessCubit {
   MockFinancialWellnessCubit() {
     _i1.throwOnMissingStub(this);
   }
 
   @override
-  _i2.FinancialWellnessState get state =>
-      (super.noSuchMethod(
-            Invocation.getter(#state),
-            returnValue: _FakeFinancialWellnessState_0(
-              this,
-              Invocation.getter(#state),
-            ),
-          )
-          as _i2.FinancialWellnessState);
+  _i9.FinancialWellnessState get state => (super.noSuchMethod(
+        Invocation.getter(#state),
+        returnValue: _i10.dummyValue<_i9.FinancialWellnessState>(
+          this,
+          Invocation.getter(#state),
+        ),
+      ) as _i9.FinancialWellnessState);
 
   @override
-  _i10.Stream<_i2.FinancialWellnessState> get stream =>
-      (super.noSuchMethod(
-            Invocation.getter(#stream),
-            returnValue: _i10.Stream<_i2.FinancialWellnessState>.empty(),
-          )
-          as _i10.Stream<_i2.FinancialWellnessState>);
+  _i11.Stream<_i9.FinancialWellnessState> get stream => (super.noSuchMethod(
+        Invocation.getter(#stream),
+        returnValue: _i11.Stream<_i9.FinancialWellnessState>.empty(),
+      ) as _i11.Stream<_i9.FinancialWellnessState>);
 
   @override
-  bool get isClosed =>
-      (super.noSuchMethod(Invocation.getter(#isClosed), returnValue: false)
-          as bool);
+  bool get isClosed => (super.noSuchMethod(
+        Invocation.getter(#isClosed),
+        returnValue: false,
+      ) as bool);
 
   @override
   void financialWellness(
-    _i11.FinancialWellnessEntity? financialWellnessEntity,
-  ) => super.noSuchMethod(
-    Invocation.method(#financialWellness, [financialWellnessEntity]),
-    returnValueForMissingStub: null,
-  );
-
-  @override
-  void emit(_i2.FinancialWellnessState? state) => super.noSuchMethod(
-    Invocation.method(#emit, [state]),
-    returnValueForMissingStub: null,
-  );
-
-  @override
-  void onChange(_i12.Change<_i2.FinancialWellnessState>? change) =>
+          _i12.FinancialWellnessEntity? financialWellnessEntity) =>
       super.noSuchMethod(
-        Invocation.method(#onChange, [change]),
+        Invocation.method(
+          #financialWellness,
+          [financialWellnessEntity],
+        ),
         returnValueForMissingStub: null,
       );
 
   @override
-  void addError(Object? error, [StackTrace? stackTrace]) => super.noSuchMethod(
-    Invocation.method(#addError, [error, stackTrace]),
-    returnValueForMissingStub: null,
-  );
+  void emit(_i9.FinancialWellnessState? state) => super.noSuchMethod(
+        Invocation.method(
+          #emit,
+          [state],
+        ),
+        returnValueForMissingStub: null,
+      );
 
   @override
-  void onError(Object? error, StackTrace? stackTrace) => super.noSuchMethod(
-    Invocation.method(#onError, [error, stackTrace]),
-    returnValueForMissingStub: null,
-  );
+  void onChange(_i13.Change<_i9.FinancialWellnessState>? change) =>
+      super.noSuchMethod(
+        Invocation.method(
+          #onChange,
+          [change],
+        ),
+        returnValueForMissingStub: null,
+      );
 
   @override
-  _i10.Future<void> close() =>
-      (super.noSuchMethod(
-            Invocation.method(#close, []),
-            returnValue: _i10.Future<void>.value(),
-            returnValueForMissingStub: _i10.Future<void>.value(),
-          )
-          as _i10.Future<void>);
-}
-
-/// A class which mocks [FinancialWellnessState].
-///
-/// See the documentation for Mockito's code generation for more information.
-class MockFinancialWellnessState extends _i1.Mock
-    implements _i2.FinancialWellnessState {
-  MockFinancialWellnessState() {
-    _i1.throwOnMissingStub(this);
-  }
+  void addError(
+    Object? error, [
+    StackTrace? stackTrace,
+  ]) =>
+      super.noSuchMethod(
+        Invocation.method(
+          #addError,
+          [
+            error,
+            stackTrace,
+          ],
+        ),
+        returnValueForMissingStub: null,
+      );
 
   @override
-  List<Object?> get props =>
-      (super.noSuchMethod(Invocation.getter(#props), returnValue: <Object?>[])
-          as List<Object?>);
+  void onError(
+    Object? error,
+    StackTrace? stackTrace,
+  ) =>
+      super.noSuchMethod(
+        Invocation.method(
+          #onError,
+          [
+            error,
+            stackTrace,
+          ],
+        ),
+        returnValueForMissingStub: null,
+      );
+
+  @override
+  _i11.Future<void> close() => (super.noSuchMethod(
+        Invocation.method(
+          #close,
+          [],
+        ),
+        returnValue: _i11.Future<void>.value(),
+        returnValueForMissingStub: _i11.Future<void>.value(),
+      ) as _i11.Future<void>);
 }
 
 /// A class which mocks [GoRouter].
 ///
 /// See the documentation for Mockito's code generation for more information.
-class MockGoRouter extends _i1.Mock implements _i13.GoRouter {
+class MockGoRouter extends _i1.Mock implements _i14.GoRouter {
   MockGoRouter() {
     _i1.throwOnMissingStub(this);
   }
 
   @override
-  _i3.RouteConfiguration get configuration =>
-      (super.noSuchMethod(
-            Invocation.getter(#configuration),
-            returnValue: _FakeRouteConfiguration_1(
-              this,
-              Invocation.getter(#configuration),
-            ),
-          )
-          as _i3.RouteConfiguration);
+  _i2.RouteConfiguration get configuration => (super.noSuchMethod(
+        Invocation.getter(#configuration),
+        returnValue: _FakeRouteConfiguration_0(
+          this,
+          Invocation.getter(#configuration),
+        ),
+      ) as _i2.RouteConfiguration);
 
   @override
-  set configuration(_i3.RouteConfiguration? _configuration) =>
+  set configuration(_i2.RouteConfiguration? _configuration) =>
       super.noSuchMethod(
-        Invocation.setter(#configuration, _configuration),
+        Invocation.setter(
+          #configuration,
+          _configuration,
+        ),
         returnValueForMissingStub: null,
       );
 
   @override
-  _i4.BackButtonDispatcher get backButtonDispatcher =>
-      (super.noSuchMethod(
-            Invocation.getter(#backButtonDispatcher),
-            returnValue: _FakeBackButtonDispatcher_2(
-              this,
-              Invocation.getter(#backButtonDispatcher),
-            ),
-          )
-          as _i4.BackButtonDispatcher);
+  _i3.BackButtonDispatcher get backButtonDispatcher => (super.noSuchMethod(
+        Invocation.getter(#backButtonDispatcher),
+        returnValue: _FakeBackButtonDispatcher_1(
+          this,
+          Invocation.getter(#backButtonDispatcher),
+        ),
+      ) as _i3.BackButtonDispatcher);
 
   @override
-  _i5.GoRouterDelegate get routerDelegate =>
-      (super.noSuchMethod(
-            Invocation.getter(#routerDelegate),
-            returnValue: _FakeGoRouterDelegate_3(
-              this,
-              Invocation.getter(#routerDelegate),
-            ),
-          )
-          as _i5.GoRouterDelegate);
+  _i4.GoRouterDelegate get routerDelegate => (super.noSuchMethod(
+        Invocation.getter(#routerDelegate),
+        returnValue: _FakeGoRouterDelegate_2(
+          this,
+          Invocation.getter(#routerDelegate),
+        ),
+      ) as _i4.GoRouterDelegate);
 
   @override
-  set routerDelegate(_i5.GoRouterDelegate? _routerDelegate) =>
+  set routerDelegate(_i4.GoRouterDelegate? _routerDelegate) =>
       super.noSuchMethod(
-        Invocation.setter(#routerDelegate, _routerDelegate),
+        Invocation.setter(
+          #routerDelegate,
+          _routerDelegate,
+        ),
         returnValueForMissingStub: null,
       );
 
   @override
-  _i6.GoRouteInformationProvider get routeInformationProvider =>
+  _i5.GoRouteInformationProvider get routeInformationProvider =>
       (super.noSuchMethod(
-            Invocation.getter(#routeInformationProvider),
-            returnValue: _FakeGoRouteInformationProvider_4(
-              this,
-              Invocation.getter(#routeInformationProvider),
-            ),
-          )
-          as _i6.GoRouteInformationProvider);
+        Invocation.getter(#routeInformationProvider),
+        returnValue: _FakeGoRouteInformationProvider_3(
+          this,
+          Invocation.getter(#routeInformationProvider),
+        ),
+      ) as _i5.GoRouteInformationProvider);
 
   @override
   set routeInformationProvider(
-    _i6.GoRouteInformationProvider? _routeInformationProvider,
-  ) => super.noSuchMethod(
-    Invocation.setter(#routeInformationProvider, _routeInformationProvider),
-    returnValueForMissingStub: null,
-  );
+          _i5.GoRouteInformationProvider? _routeInformationProvider) =>
+      super.noSuchMethod(
+        Invocation.setter(
+          #routeInformationProvider,
+          _routeInformationProvider,
+        ),
+        returnValueForMissingStub: null,
+      );
 
   @override
-  _i7.GoRouteInformationParser get routeInformationParser =>
+  _i6.GoRouteInformationParser get routeInformationParser =>
       (super.noSuchMethod(
-            Invocation.getter(#routeInformationParser),
-            returnValue: _FakeGoRouteInformationParser_5(
-              this,
-              Invocation.getter(#routeInformationParser),
-            ),
-          )
-          as _i7.GoRouteInformationParser);
+        Invocation.getter(#routeInformationParser),
+        returnValue: _FakeGoRouteInformationParser_4(
+          this,
+          Invocation.getter(#routeInformationParser),
+        ),
+      ) as _i6.GoRouteInformationParser);
 
   @override
   set routeInformationParser(
-    _i7.GoRouteInformationParser? _routeInformationParser,
-  ) => super.noSuchMethod(
-    Invocation.setter(#routeInformationParser, _routeInformationParser),
-    returnValueForMissingStub: null,
-  );
+          _i6.GoRouteInformationParser? _routeInformationParser) =>
+      super.noSuchMethod(
+        Invocation.setter(
+          #routeInformationParser,
+          _routeInformationParser,
+        ),
+        returnValueForMissingStub: null,
+      );
 
   @override
-  bool get overridePlatformDefaultLocation =>
-      (super.noSuchMethod(
-            Invocation.getter(#overridePlatformDefaultLocation),
-            returnValue: false,
-          )
-          as bool);
+  bool get overridePlatformDefaultLocation => (super.noSuchMethod(
+        Invocation.getter(#overridePlatformDefaultLocation),
+        returnValue: false,
+      ) as bool);
 
   @override
-  _i8.GoRouterState get state =>
-      (super.noSuchMethod(
-            Invocation.getter(#state),
-            returnValue: _FakeGoRouterState_6(this, Invocation.getter(#state)),
-          )
-          as _i8.GoRouterState);
+  _i7.GoRouterState get state => (super.noSuchMethod(
+        Invocation.getter(#state),
+        returnValue: _FakeGoRouterState_5(
+          this,
+          Invocation.getter(#state),
+        ),
+      ) as _i7.GoRouterState);
 
   @override
-  bool canPop() =>
-      (super.noSuchMethod(Invocation.method(#canPop, []), returnValue: false)
-          as bool);
+  bool canPop() => (super.noSuchMethod(
+        Invocation.method(
+          #canPop,
+          [],
+        ),
+        returnValue: false,
+      ) as bool);
 
   @override
   String namedLocation(
@@ -291,41 +334,51 @@ class MockGoRouter extends _i1.Mock implements _i13.GoRouter {
     String? fragment,
   }) =>
       (super.noSuchMethod(
-            Invocation.method(
-              #namedLocation,
-              [name],
-              {
-                #pathParameters: pathParameters,
-                #queryParameters: queryParameters,
-                #fragment: fragment,
-              },
-            ),
-            returnValue: _i14.dummyValue<String>(
-              this,
-              Invocation.method(
-                #namedLocation,
-                [name],
-                {
-                  #pathParameters: pathParameters,
-                  #queryParameters: queryParameters,
-                  #fragment: fragment,
-                },
-              ),
-            ),
-          )
-          as String);
+        Invocation.method(
+          #namedLocation,
+          [name],
+          {
+            #pathParameters: pathParameters,
+            #queryParameters: queryParameters,
+            #fragment: fragment,
+          },
+        ),
+        returnValue: _i10.dummyValue<String>(
+          this,
+          Invocation.method(
+            #namedLocation,
+            [name],
+            {
+              #pathParameters: pathParameters,
+              #queryParameters: queryParameters,
+              #fragment: fragment,
+            },
+          ),
+        ),
+      ) as String);
 
   @override
-  void go(String? location, {Object? extra}) => super.noSuchMethod(
-    Invocation.method(#go, [location], {#extra: extra}),
-    returnValueForMissingStub: null,
-  );
+  void go(
+    String? location, {
+    Object? extra,
+  }) =>
+      super.noSuchMethod(
+        Invocation.method(
+          #go,
+          [location],
+          {#extra: extra},
+        ),
+        returnValueForMissingStub: null,
+      );
 
   @override
   void restore(_i15.RouteMatchList? matchList) => super.noSuchMethod(
-    Invocation.method(#restore, [matchList]),
-    returnValueForMissingStub: null,
-  );
+        Invocation.method(
+          #restore,
+          [matchList],
+        ),
+        returnValueForMissingStub: null,
+      );
 
   @override
   void goNamed(
@@ -334,125 +387,147 @@ class MockGoRouter extends _i1.Mock implements _i13.GoRouter {
     Map<String, dynamic>? queryParameters = const {},
     Object? extra,
     String? fragment,
-  }) => super.noSuchMethod(
-    Invocation.method(
-      #goNamed,
-      [name],
-      {
-        #pathParameters: pathParameters,
-        #queryParameters: queryParameters,
-        #extra: extra,
-        #fragment: fragment,
-      },
-    ),
-    returnValueForMissingStub: null,
-  );
-
-  @override
-  _i10.Future<T?> push<T extends Object?>(String? location, {Object? extra}) =>
-      (super.noSuchMethod(
-            Invocation.method(#push, [location], {#extra: extra}),
-            returnValue: _i10.Future<T?>.value(),
-          )
-          as _i10.Future<T?>);
-
-  @override
-  _i10.Future<T?> pushNamed<T extends Object?>(
-    String? name, {
-    Map<String, String>? pathParameters = const {},
-    Map<String, dynamic>? queryParameters = const {},
-    Object? extra,
   }) =>
-      (super.noSuchMethod(
-            Invocation.method(
-              #pushNamed,
-              [name],
-              {
-                #pathParameters: pathParameters,
-                #queryParameters: queryParameters,
-                #extra: extra,
-              },
-            ),
-            returnValue: _i10.Future<T?>.value(),
-          )
-          as _i10.Future<T?>);
+      super.noSuchMethod(
+        Invocation.method(
+          #goNamed,
+          [name],
+          {
+            #pathParameters: pathParameters,
+            #queryParameters: queryParameters,
+            #extra: extra,
+            #fragment: fragment,
+          },
+        ),
+        returnValueForMissingStub: null,
+      );
 
   @override
-  _i10.Future<T?> pushReplacement<T extends Object?>(
+  _i11.Future<T?> push<T extends Object?>(
     String? location, {
     Object? extra,
   }) =>
       (super.noSuchMethod(
-            Invocation.method(#pushReplacement, [location], {#extra: extra}),
-            returnValue: _i10.Future<T?>.value(),
-          )
-          as _i10.Future<T?>);
+        Invocation.method(
+          #push,
+          [location],
+          {#extra: extra},
+        ),
+        returnValue: _i11.Future<T?>.value(),
+      ) as _i11.Future<T?>);
 
   @override
-  _i10.Future<T?> pushReplacementNamed<T extends Object?>(
+  _i11.Future<T?> pushNamed<T extends Object?>(
     String? name, {
     Map<String, String>? pathParameters = const {},
     Map<String, dynamic>? queryParameters = const {},
     Object? extra,
   }) =>
       (super.noSuchMethod(
-            Invocation.method(
-              #pushReplacementNamed,
-              [name],
-              {
-                #pathParameters: pathParameters,
-                #queryParameters: queryParameters,
-                #extra: extra,
-              },
-            ),
-            returnValue: _i10.Future<T?>.value(),
-          )
-          as _i10.Future<T?>);
+        Invocation.method(
+          #pushNamed,
+          [name],
+          {
+            #pathParameters: pathParameters,
+            #queryParameters: queryParameters,
+            #extra: extra,
+          },
+        ),
+        returnValue: _i11.Future<T?>.value(),
+      ) as _i11.Future<T?>);
 
   @override
-  _i10.Future<T?> replace<T>(String? location, {Object? extra}) =>
+  _i11.Future<T?> pushReplacement<T extends Object?>(
+    String? location, {
+    Object? extra,
+  }) =>
       (super.noSuchMethod(
-            Invocation.method(#replace, [location], {#extra: extra}),
-            returnValue: _i10.Future<T?>.value(),
-          )
-          as _i10.Future<T?>);
+        Invocation.method(
+          #pushReplacement,
+          [location],
+          {#extra: extra},
+        ),
+        returnValue: _i11.Future<T?>.value(),
+      ) as _i11.Future<T?>);
 
   @override
-  _i10.Future<T?> replaceNamed<T>(
+  _i11.Future<T?> pushReplacementNamed<T extends Object?>(
     String? name, {
     Map<String, String>? pathParameters = const {},
     Map<String, dynamic>? queryParameters = const {},
     Object? extra,
   }) =>
       (super.noSuchMethod(
-            Invocation.method(
-              #replaceNamed,
-              [name],
-              {
-                #pathParameters: pathParameters,
-                #queryParameters: queryParameters,
-                #extra: extra,
-              },
-            ),
-            returnValue: _i10.Future<T?>.value(),
-          )
-          as _i10.Future<T?>);
+        Invocation.method(
+          #pushReplacementNamed,
+          [name],
+          {
+            #pathParameters: pathParameters,
+            #queryParameters: queryParameters,
+            #extra: extra,
+          },
+        ),
+        returnValue: _i11.Future<T?>.value(),
+      ) as _i11.Future<T?>);
+
+  @override
+  _i11.Future<T?> replace<T>(
+    String? location, {
+    Object? extra,
+  }) =>
+      (super.noSuchMethod(
+        Invocation.method(
+          #replace,
+          [location],
+          {#extra: extra},
+        ),
+        returnValue: _i11.Future<T?>.value(),
+      ) as _i11.Future<T?>);
+
+  @override
+  _i11.Future<T?> replaceNamed<T>(
+    String? name, {
+    Map<String, String>? pathParameters = const {},
+    Map<String, dynamic>? queryParameters = const {},
+    Object? extra,
+  }) =>
+      (super.noSuchMethod(
+        Invocation.method(
+          #replaceNamed,
+          [name],
+          {
+            #pathParameters: pathParameters,
+            #queryParameters: queryParameters,
+            #extra: extra,
+          },
+        ),
+        returnValue: _i11.Future<T?>.value(),
+      ) as _i11.Future<T?>);
 
   @override
   void pop<T extends Object?>([T? result]) => super.noSuchMethod(
-    Invocation.method(#pop, [result]),
-    returnValueForMissingStub: null,
-  );
+        Invocation.method(
+          #pop,
+          [result],
+        ),
+        returnValueForMissingStub: null,
+      );
 
   @override
   void refresh() => super.noSuchMethod(
-    Invocation.method(#refresh, []),
-    returnValueForMissingStub: null,
-  );
+        Invocation.method(
+          #refresh,
+          [],
+        ),
+        returnValueForMissingStub: null,
+      );
 
   @override
   void dispose() => super.noSuchMethod(
-    Invocation.method(#dispose, []),
-    returnValueForMissingStub: null,
-  );
+        Invocation.method(
+          #dispose,
+          [],
+        ),
+        returnValueForMissingStub: null,
+      );
 }

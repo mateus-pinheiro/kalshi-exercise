@@ -15,25 +15,27 @@ import 'package:mockito/mockito.dart';
 
 import 'financial_wellness_input_page_test.mocks.dart';
 
-@GenerateMocks([FinancialWellnessCubit, FinancialWellnessState, GoRouter])
+@GenerateMocks([FinancialWellnessCubit, GoRouter])
 void main() {
   late MockFinancialWellnessCubit mockCubit;
-  late MockFinancialWellnessState mockState;
   late MockGoRouter mockGoRouter;
+
+  provideDummy<FinancialWellnessState>(FinancialWellnessStateSuccess(
+      financialWellnessStatus: FinancialWellnessStatus.healthy));
 
   setUp(() {
     mockCubit = MockFinancialWellnessCubit();
-    mockState = MockFinancialWellnessState();
     mockGoRouter = MockGoRouter();
 
     // Register mock cubit with GetIt
     getIt.registerSingleton<FinancialWellnessCubit>(mockCubit);
 
-    when(mockCubit.state).thenAnswer((_) => mockState);
+    when(mockCubit.state).thenAnswer((_) => FinancialWellnessState.success(
+        financialWellnessStatus: FinancialWellnessStatus.healthy));
     when(mockCubit.stream).thenAnswer(
       (_) => Stream.value(
-        FinancialWellnessSuccessfullyState(
-          FinancialWellnessStatus.healthy,
+        FinancialWellnessStateSuccess(
+          financialWellnessStatus: FinancialWellnessStatus.healthy,
         ),
       ),
     );
