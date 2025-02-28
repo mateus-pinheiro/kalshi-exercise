@@ -6,16 +6,16 @@ import '../../shared/shared.dart';
 import '../../shared/styles/spacings.dart';
 
 
-class KalshiForm extends StatefulWidget {
-  const KalshiForm({super.key, required this.onContinue});
+class FinancialWellnessForm extends StatefulWidget {
+  const FinancialWellnessForm({super.key, required this.onContinue});
 
   final Function(FinancialWellnessEntity) onContinue;
 
   @override
-  State<StatefulWidget> createState() => _KalshiFormState();
+  State<StatefulWidget> createState() => FinancialWellnessFormState();
 }
 
-class _KalshiFormState extends State<KalshiForm> {
+class FinancialWellnessFormState extends State<FinancialWellnessForm> {
   final _formKey = GlobalKey<FormState>();
   final _incomeController = TextEditingController(text: '0.00');
   final _costsController = TextEditingController(text: '0.00');

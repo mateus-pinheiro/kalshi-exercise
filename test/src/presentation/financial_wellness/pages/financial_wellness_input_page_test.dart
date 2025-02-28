@@ -67,14 +67,14 @@ void main() {
     await tester.pumpWidget(createWidgetUnderTest());
 
     expect(find.byType(Text), findsWidgets);
-    expect(find.byType(KalshiForm), findsOneWidget);
+    expect(find.byType(FinancialWellnessForm), findsOneWidget);
   });
 
   testWidgets('should display form card with logo and inputs', (tester) async {
     await tester.pumpWidget(createWidgetUnderTest());
 
     expect(find.byType(Card), findsOneWidget);
-    expect(find.byType(KalshiForm), findsOneWidget);
+    expect(find.byType(FinancialWellnessForm), findsOneWidget);
   });
 
   testWidgets('should navigate to results page on successful submission',
@@ -90,11 +90,11 @@ void main() {
     await tester.pumpAndSettle();
 
     // Find and interact with form
-    final form = find.byType(KalshiForm);
+    final form = find.byType(FinancialWellnessForm);
     expect(form, findsOneWidget);
 
     // Trigger form submission through the callback
-    await tester.tap(find.byType(KalshiForm));
+    await tester.tap(find.byType(FinancialWellnessForm));
     await tester.pumpAndSettle();
 
     // Verify navigation

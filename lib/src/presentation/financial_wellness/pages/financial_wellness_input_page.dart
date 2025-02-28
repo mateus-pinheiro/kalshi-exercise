@@ -146,7 +146,7 @@ class _InputCard extends StatelessWidget {
                     ),
                   ],
                 ),
-                KalshiForm(
+                FinancialWellnessForm(
                   onContinue: onContinueButtonPressed,
                 ),
               ],
